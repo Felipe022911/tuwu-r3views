@@ -24,7 +24,7 @@ function Home() {
     return () => clearInterval(t);
   }, []);
   const news = NEWS[i] ?? NEWS[0]!;
-  const featured = GAMES.filter((g) => g.year >= 2023).slice(0, 4);
+  const featured = GAMES.filter((g) => g.image).slice(0, 4);
 
   return (
     <div className="flex flex-col gap-8">
