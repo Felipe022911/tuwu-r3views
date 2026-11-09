@@ -18,6 +18,9 @@ import imgFf7 from "@/assets/games/ff7.jpg";
 import imgSotn from "@/assets/games/sotn.jpg";
 import imgChrono from "@/assets/games/chrono.jpg";
 import imgSmb3 from "@/assets/games/smb3.jpg";
+import imgHalo3 from "@/assets/games/halo-3.jpg";
+import imgSpiderman2 from "@/assets/games/spiderman-2.jpg";
+import imgHades2 from "@/assets/games/hades-2.jpg";
 
 export type Game = {
   id: string; title: string; brand: string; studio: string; platform: string;
@@ -30,12 +33,12 @@ export const GAMES: Game[] = [
   { id: "zelda-totk", title: "Zelda: Tears of the Kingdom", brand: "Nintendo", studio: "Nintendo EPD", platform: "Switch", year: 2023, generation: "9ª Gen", critic: 96, community: 90, genre: "Aventura", summary: "Construcción libre y física que convierte Hyrule en un laboratorio.", image: imgZeldaTotk },
   { id: "baldurs-gate-3", title: "Baldur's Gate 3", brand: "Larian", studio: "Larian Studios", platform: "PC", year: 2023, generation: "9ª Gen", critic: 96, community: 95, genre: "RPG", summary: "El estándar moderno de los RPG por turnos.", image: imgBaldursGate3 },
   { id: "starfield", title: "Starfield", brand: "Microsoft", studio: "Bethesda", platform: "Xbox", year: 2023, generation: "9ª Gen", critic: 83, community: 61, genre: "RPG", summary: "Ambición estelar con un ritmo desigual.", image: imgStarfield },
-  { id: "spiderman-2", title: "Marvel's Spider-Man 2", brand: "Sony", studio: "Insomniac", platform: "PS5", year: 2023, generation: "9ª Gen", critic: 90, community: 84, genre: "Acción", summary: "Balanceo pulido y dos héroes en una Nueva York vibrante." },
-  { id: "hades-2", title: "Hades II", brand: "Supergiant", studio: "Supergiant Games", platform: "Multi", year: 2024, generation: "9ª Gen", critic: 94, community: 93, genre: "Roguelike", summary: "La secuela que supera a un clásico moderno." },
+  { id: "spiderman-2", title: "Marvel's Spider-Man 2", brand: "Sony", studio: "Insomniac", platform: "PS5", year: 2023, generation: "9ª Gen", critic: 90, community: 84, genre: "Acción", summary: "Balanceo pulido y dos héroes en una Nueva York vibrante.", image: imgSpiderman2 },
+  { id: "hades-2", title: "Hades II", brand: "Supergiant", studio: "Supergiant Games", platform: "Multi", year: 2024, generation: "9ª Gen", critic: 94, community: 93, genre: "Roguelike", summary: "La secuela que supera a un clásico moderno.", image: imgHades2 },
   { id: "tlou2", title: "The Last of Us Part II", brand: "Sony", studio: "Naughty Dog", platform: "PS4", year: 2020, generation: "8ª Gen", critic: 93, community: 72, genre: "Acción", summary: "Narrativa audaz que dividió a la comunidad.", image: imgTlou2 },
   { id: "witcher-3", title: "The Witcher 3", brand: "CD Projekt", studio: "CD Projekt Red", platform: "Multi", year: 2015, generation: "8ª Gen", critic: 93, community: 94, genre: "RPG", summary: "Misiones secundarias que valen como juegos completos.", image: imgWitcher3 },
   { id: "botw", title: "Zelda: Breath of the Wild", brand: "Nintendo", studio: "Nintendo EPD", platform: "Switch", year: 2017, generation: "8ª Gen", critic: 97, community: 91, genre: "Aventura", summary: "Reinventó el mundo abierto.", image: imgBotw },
-  { id: "halo-3", title: "Halo 3", brand: "Microsoft", studio: "Bungie", platform: "Xbox 360", year: 2007, generation: "7ª Gen", critic: 94, community: 88, genre: "Shooter", summary: "El cierre épico de la trilogía del Jefe Maestro." },
+  { id: "halo-3", title: "Halo 3", brand: "Microsoft", studio: "Bungie", platform: "Xbox 360", year: 2007, generation: "7ª Gen", critic: 94, community: 88, genre: "Shooter", summary: "El cierre épico de la trilogía del Jefe Maestro.", image: imgHalo3 },
   { id: "portal-2", title: "Portal 2", brand: "Valve", studio: "Valve", platform: "Multi", year: 2011, generation: "7ª Gen", critic: 95, community: 96, genre: "Puzle", summary: "Humor y diseño de puzles perfectos.", image: imgPortal2 },
   { id: "gta-sa", title: "GTA: San Andreas", brand: "Rockstar", studio: "Rockstar North", platform: "PS2", year: 2004, generation: "6ª Gen", critic: 95, community: 90, genre: "Mundo abierto", summary: "Un estado entero en un disco.", image: imgGtaSa },
   { id: "mgs3", title: "Metal Gear Solid 3", brand: "Konami", studio: "Kojima Productions", platform: "PS2", year: 2004, generation: "6ª Gen", critic: 91, community: 93, genre: "Sigilo", summary: "La obra maestra del sigilo en la jungla.", image: imgMgs3 },

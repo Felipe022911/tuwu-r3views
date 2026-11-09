@@ -58,6 +58,8 @@ function Database() {
         <div className="grid gap-3 @3xl:grid-cols-2 @5xl:grid-cols-1">
           {rows.map((g) => (
             <div key={g.id} className="border-2 border-foreground bg-card p-3 flex items-center gap-3">
+              {g.image && <img src={g.image} alt={`Arte de ${g.title}`} loading="lazy" width={1024} height={640}
+                className="h-14 w-14 shrink-0 object-cover border-2 border-foreground" />}
               <CriticBadge v={g.critic} />
               <div className="flex-1 min-w-0">
                 <p className="font-bold truncate">{g.title}</p>
