@@ -20,10 +20,10 @@ function Home() {
   useEffect(() => { const t = setInterval(() => setI((x) => (x + 1) % NEWS.length), 5000); return () => clearInterval(t); }, []);
   useEffect(() => {
     let n = 4;
-    const t = setInterval(() => { setFeed((f) => [REACTIONS[n++ % REACTIONS.length], ...f].slice(0, 6)); }, 3500);
+    const t = setInterval(() => { setFeed((f) => [REACTIONS[n++ % REACTIONS.length]!, ...f].slice(0, 6)); }, 3500);
     return () => clearInterval(t);
   }, []);
-  const news = NEWS[i];
+  const news = NEWS[i] ?? NEWS[0]!;
   const featured = GAMES.filter((g) => g.year >= 2023).slice(0, 4);
 
   return (
