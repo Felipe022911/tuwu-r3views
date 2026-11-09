@@ -5,9 +5,9 @@ import { Chip, FilterGroup, GameCard } from "@/components/twu";
 
 export const Route = createFileRoute("/historical")({
   head: () => ({ meta: [
-    { title: "Archivo Histórico — TWU R3VIEWS" },
+    { title: "Archivo Histórico — TUWU R3VIEWS" },
     { name: "description", content: "Línea de tiempo de clásicos por generación de consolas, estudio y año." },
-    { property: "og:title", content: "Archivo Histórico — TWU R3VIEWS" },
+    { property: "og:title", content: "Archivo Histórico — TUWU R3VIEWS" },
     { property: "og:description", content: "Línea de tiempo de clásicos por generación de consolas, estudio y año." },
   ] }),
   component: Historical,

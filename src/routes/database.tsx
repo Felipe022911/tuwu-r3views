@@ -5,9 +5,9 @@ import { BookmarkBtn, Chip, CommunityScore, CriticBadge, DevTag, FilterGroup } f
 
 export const Route = createFileRoute("/database")({
   head: () => ({ meta: [
-    { title: "Base de Datos de Reseñas — TWU R3VIEWS" },
+    { title: "Base de Datos de Reseñas — TUWU R3VIEWS" },
     { name: "description", content: "Busca, filtra y ordena reseñas con puntuación de crítica y comunidad." },
-    { property: "og:title", content: "Base de Datos de Reseñas — TWU R3VIEWS" },
+    { property: "og:title", content: "Base de Datos de Reseñas — TUWU R3VIEWS" },
     { property: "og:description", content: "Busca, filtra y ordena reseñas con puntuación de crítica y comunidad." },
   ] }),
   component: Database,

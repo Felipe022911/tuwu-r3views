@@ -5,9 +5,9 @@ import { BookmarkBtn, GameCard } from "@/components/twu";
 
 export const Route = createFileRoute("/saved")({
   head: () => ({ meta: [
-    { title: "Guardados — TWU R3VIEWS" },
+    { title: "Guardados — TUWU R3VIEWS" },
     { name: "description", content: "Tus reseñas y artículos marcados para acceso instantáneo." },
-    { property: "og:title", content: "Guardados — TWU R3VIEWS" },
+    { property: "og:title", content: "Guardados — TUWU R3VIEWS" },
     { property: "og:description", content: "Tus reseñas y artículos marcados para acceso instantáneo." },
   ] }),
   component: Saved,
