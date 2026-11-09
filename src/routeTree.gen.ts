@@ -10,33 +10,63 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DatabaseRouteImport } from './routes/database'
+import { Route as HistoricalRouteImport } from './routes/historical'
+import { Route as SavedRouteImport } from './routes/saved'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DatabaseRoute = DatabaseRouteImport.update({
+  id: '/database',
+  path: '/database',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoricalRoute = HistoricalRouteImport.update({
+  id: '/historical',
+  path: '/historical',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SavedRoute = SavedRouteImport.update({
+  id: '/saved',
+  path: '/saved',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/database': typeof DatabaseRoute
+  '/historical': typeof HistoricalRoute
+  '/saved': typeof SavedRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/database': typeof DatabaseRoute
+  '/historical': typeof HistoricalRoute
+  '/saved': typeof SavedRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/database': typeof DatabaseRoute
+  '/historical': typeof HistoricalRoute
+  '/saved': typeof SavedRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/database' | '/historical' | '/saved'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/database' | '/historical' | '/saved'
+  id: '__root__' | '/' | '/database' | '/historical' | '/saved'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DatabaseRoute: typeof DatabaseRoute
+  HistoricalRoute: typeof HistoricalRoute
+  SavedRoute: typeof SavedRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +78,35 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/database': {
+      id: '/database'
+      path: '/database'
+      fullPath: '/database'
+      preLoaderRoute: typeof DatabaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/historical': {
+      id: '/historical'
+      path: '/historical'
+      fullPath: '/historical'
+      preLoaderRoute: typeof HistoricalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/saved': {
+      id: '/saved'
+      path: '/saved'
+      fullPath: '/saved'
+      preLoaderRoute: typeof SavedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DatabaseRoute: DatabaseRoute,
+  HistoricalRoute: HistoricalRoute,
+  SavedRoute: SavedRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
