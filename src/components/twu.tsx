@@ -99,6 +99,10 @@ export function BookmarkBtn({ id }: { id: string }) {
 export function GameCard({ g }: { g: Game }) {
   return (
     <article className="brutal bg-card p-4 flex flex-col gap-3">
+      {g.image && (
+        <img src={g.image} alt={`Arte de ${g.title}`} loading="lazy" width={1024} height={640}
+          className="w-full aspect-[8/5] object-cover border-2 border-foreground" />
+      )}
       <div className="flex items-start justify-between gap-2">
         <div>
           <DevTag>{g.studio}</DevTag>

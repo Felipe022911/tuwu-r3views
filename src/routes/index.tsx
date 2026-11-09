@@ -35,13 +35,17 @@ function Home() {
       </div>
 
       <section className="brutal bg-foreground text-background p-6 @3xl:p-10">
-        <div key={news.id} className="animate-pop">
-          <div className="flex gap-2 items-center mb-3">
-            {news.breaking && <span className="bg-primary text-primary-foreground text-xs font-bold px-2 py-0.5">ÚLTIMA HORA</span>}
-            <span className="text-xs text-background/70">{news.tag} · {news.time}</span>
+        <div key={news.id} className="animate-pop grid gap-6 @3xl:grid-cols-[1fr_380px] @3xl:items-center">
+          <div>
+            <div className="flex gap-2 items-center mb-3">
+              {news.breaking && <span className="bg-primary text-primary-foreground text-xs font-bold px-2 py-0.5">ÚLTIMA HORA</span>}
+              <span className="text-xs text-background/70">{news.tag} · {news.time}</span>
+            </div>
+            <h1 className="font-display text-3xl @3xl:text-5xl leading-none max-w-3xl">{news.title}</h1>
+            <p className="mt-3 max-w-xl text-background/80">{news.body}</p>
           </div>
-          <h1 className="font-display text-3xl @3xl:text-5xl leading-none max-w-3xl">{news.title}</h1>
-          <p className="mt-3 max-w-xl text-background/80">{news.body}</p>
+          <img src={news.image} alt={`Ilustración: ${news.title}`} width={1024} height={640}
+            className="w-full aspect-[8/5] object-cover border-2 border-background/40" />
         </div>
         <div className="mt-6 flex flex-wrap items-center gap-2">
           {NEWS.map((n, k) => (
