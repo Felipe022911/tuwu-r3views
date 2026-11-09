@@ -1,13 +1,24 @@
+import imgEldenRing from "@/assets/games/elden-ring.jpg";
+import imgZeldaTotk from "@/assets/games/zelda-totk.jpg";
+import imgBaldursGate3 from "@/assets/games/baldurs-gate-3.jpg";
+import imgStarfield from "@/assets/games/starfield.jpg";
+import imgGtaVi from "@/assets/news/gta-vi.jpg";
+import imgNintendoDirect from "@/assets/news/nintendo-direct.jpg";
+import imgHadesAwards from "@/assets/news/hades-awards.jpg";
+import imgFromsoftware from "@/assets/news/fromsoftware.jpg";
+import imgLarianRpg from "@/assets/news/larian-rpg.jpg";
+
 export type Game = {
   id: string; title: string; brand: string; studio: string; platform: string;
   year: number; generation: string; critic: number; community: number; genre: string; summary: string;
+  image?: string;
 };
 
 export const GAMES: Game[] = [
-  { id: "elden-ring", title: "Elden Ring", brand: "Bandai Namco", studio: "FromSoftware", platform: "Multi", year: 2022, generation: "9ª Gen", critic: 96, community: 92, genre: "Action RPG", summary: "Un mundo abierto implacable que redefine el género souls." },
-  { id: "zelda-totk", title: "Zelda: Tears of the Kingdom", brand: "Nintendo", studio: "Nintendo EPD", platform: "Switch", year: 2023, generation: "9ª Gen", critic: 96, community: 90, genre: "Aventura", summary: "Construcción libre y física que convierte Hyrule en un laboratorio." },
-  { id: "baldurs-gate-3", title: "Baldur's Gate 3", brand: "Larian", studio: "Larian Studios", platform: "PC", year: 2023, generation: "9ª Gen", critic: 96, community: 95, genre: "RPG", summary: "El estándar moderno de los RPG por turnos." },
-  { id: "starfield", title: "Starfield", brand: "Microsoft", studio: "Bethesda", platform: "Xbox", year: 2023, generation: "9ª Gen", critic: 83, community: 61, genre: "RPG", summary: "Ambición estelar con un ritmo desigual." },
+  { id: "elden-ring", title: "Elden Ring", brand: "Bandai Namco", studio: "FromSoftware", platform: "Multi", year: 2022, generation: "9ª Gen", critic: 96, community: 92, genre: "Action RPG", summary: "Un mundo abierto implacable que redefine el género souls.", image: imgEldenRing },
+  { id: "zelda-totk", title: "Zelda: Tears of the Kingdom", brand: "Nintendo", studio: "Nintendo EPD", platform: "Switch", year: 2023, generation: "9ª Gen", critic: 96, community: 90, genre: "Aventura", summary: "Construcción libre y física que convierte Hyrule en un laboratorio.", image: imgZeldaTotk },
+  { id: "baldurs-gate-3", title: "Baldur's Gate 3", brand: "Larian", studio: "Larian Studios", platform: "PC", year: 2023, generation: "9ª Gen", critic: 96, community: 95, genre: "RPG", summary: "El estándar moderno de los RPG por turnos.", image: imgBaldursGate3 },
+  { id: "starfield", title: "Starfield", brand: "Microsoft", studio: "Bethesda", platform: "Xbox", year: 2023, generation: "9ª Gen", critic: 83, community: 61, genre: "RPG", summary: "Ambición estelar con un ritmo desigual.", image: imgStarfield },
   { id: "spiderman-2", title: "Marvel's Spider-Man 2", brand: "Sony", studio: "Insomniac", platform: "PS5", year: 2023, generation: "9ª Gen", critic: 90, community: 84, genre: "Acción", summary: "Balanceo pulido y dos héroes en una Nueva York vibrante." },
   { id: "hades-2", title: "Hades II", brand: "Supergiant", studio: "Supergiant Games", platform: "Multi", year: 2024, generation: "9ª Gen", critic: 94, community: 93, genre: "Roguelike", summary: "La secuela que supera a un clásico moderno." },
   { id: "tlou2", title: "The Last of Us Part II", brand: "Sony", studio: "Naughty Dog", platform: "PS4", year: 2020, generation: "8ª Gen", critic: 93, community: 72, genre: "Acción", summary: "Narrativa audaz que dividió a la comunidad." },
@@ -24,13 +35,13 @@ export const GAMES: Game[] = [
   { id: "smb3", title: "Super Mario Bros. 3", brand: "Nintendo", studio: "Nintendo EAD", platform: "NES", year: 1988, generation: "3ª Gen", critic: 97, community: 93, genre: "Plataformas", summary: "La cima de las plataformas 8-bit." },
 ];
 
-export type News = { id: string; title: string; tag: string; time: string; breaking?: boolean; body: string };
+export type News = { id: string; title: string; tag: string; time: string; breaking?: boolean; body: string; image: string };
 export const NEWS: News[] = [
-  { id: "n1", title: "GTA VI confirma nueva ventana de lanzamiento", tag: "Rockstar", time: "Hace 12 min", breaking: true, body: "Rockstar comparte detalles inéditos de Leonida y su mapa." },
-  { id: "n2", title: "Nintendo anuncia un Direct para esta semana", tag: "Nintendo", time: "Hace 40 min", breaking: true, body: "Cuarenta minutos centrados en lanzamientos del primer trimestre." },
-  { id: "n3", title: "Hades II arrasa en los premios de la industria", tag: "Supergiant", time: "Hace 2 h", body: "Cinco galardones, incluido mejor dirección de juego." },
-  { id: "n4", title: "FromSoftware contrata para un nuevo proyecto", tag: "FromSoftware", time: "Hace 3 h", breaking: true, body: "Las ofertas apuntan a un título de acción en tercera persona." },
-  { id: "n5", title: "Larian revela su próximo RPG", tag: "Larian", time: "Hace 5 h", body: "El estudio abandona Dungeons & Dragons para un mundo propio." },
+  { id: "n1", title: "GTA VI confirma nueva ventana de lanzamiento", tag: "Rockstar", time: "Hace 12 min", breaking: true, body: "Rockstar comparte detalles inéditos de Leonida y su mapa.", image: imgGtaVi },
+  { id: "n2", title: "Nintendo anuncia un Direct para esta semana", tag: "Nintendo", time: "Hace 40 min", breaking: true, body: "Cuarenta minutos centrados en lanzamientos del primer trimestre.", image: imgNintendoDirect },
+  { id: "n3", title: "Hades II arrasa en los premios de la industria", tag: "Supergiant", time: "Hace 2 h", body: "Cinco galardones, incluido mejor dirección de juego.", image: imgHadesAwards },
+  { id: "n4", title: "FromSoftware contrata para un nuevo proyecto", tag: "FromSoftware", time: "Hace 3 h", breaking: true, body: "Las ofertas apuntan a un título de acción en tercera persona.", image: imgFromsoftware },
+  { id: "n5", title: "Larian revela su próximo RPG", tag: "Larian", time: "Hace 5 h", body: "El estudio abandona Dungeons & Dragons para un mundo propio.", image: imgLarianRpg },
 ];
 
 export const REACTIONS = [
