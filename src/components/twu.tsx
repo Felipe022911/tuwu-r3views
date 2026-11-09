@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 
 export function Logo() {
   return (
-    <Link to="/" className="flex items-center gap-2 select-none" aria-label="TWU R3VIEWS inicio">
-      <span className="bg-foreground text-background font-display px-2 py-1 text-xl leading-none">TWU</span>
+    <Link to="/" className="flex items-center gap-2 select-none" aria-label="TUWU R3VIEWS inicio">
+      <span className="bg-foreground text-background font-display px-2 py-1 text-xl leading-none">TUWU</span>
       <span className="font-display text-xl leading-none tracking-tight">
         R<span className="text-accent">3</span>VIEWS
       </span>
@@ -69,7 +69,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         <Header />
         <main className="p-4 @3xl:p-6">{children}</main>
         <footer className="border-t-2 border-foreground px-4 py-6 text-xs text-muted-foreground">
-          © 2026 TWU R3VIEWS — Noticias, reseñas y archivo de videojuegos.
+          © 2026 TUWU R3VIEWS — Noticias, reseñas y archivo de videojuegos.
         </footer>
       </div>
     </div>

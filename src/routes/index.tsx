@@ -6,9 +6,9 @@ import { GameCard, BookmarkBtn } from "@/components/twu";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "TWU R3VIEWS — Noticias y reseñas de videojuegos" },
+    { title: "TUWU R3VIEWS — Noticias y reseñas de videojuegos" },
     { name: "description", content: "Últimas noticias, reseñas destacadas y reacciones de la comunidad gamer." },
-    { property: "og:title", content: "TWU R3VIEWS — Noticias y reseñas" },
+    { property: "og:title", content: "TUWU R3VIEWS — Noticias y reseñas" },
     { property: "og:description", content: "Últimas noticias, reseñas destacadas y reacciones de la comunidad gamer." },
   ] }),
   component: Home,
